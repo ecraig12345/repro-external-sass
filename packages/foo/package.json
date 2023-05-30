@@ -1,0 +1,16 @@
+{
+  "name": "@repro/foo",
+  "private": true,
+  "version": "1.0.0",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "scripts": {
+    "build": "run-script build"
+  },
+  "devDependencies": {
+    "@repro/scripts": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+// import common sass
+@import '~@repro/common-sass/dist/common.scss';
+
+.app {
+  background: $color-primary;
+  // background: rgb(116, 234, 114);
+
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  padding: 3em;
+  border-radius: 40px;
+  color: rgb(44, 44, 44);
+}
