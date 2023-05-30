@@ -1,4 +1,4 @@
-// import styles from './index.module.scss';
+import styles from './index.module.scss';
 import { foo } from '@repro/foo';
 
 // const styles = { app: 'app' };
@@ -8,7 +8,7 @@ function start() {
 
   console.log(foo);
 
-  // div.className = styles.app;
+  div.className = styles.app;
   div.innerHTML = 'Hello World!';
 
   document.body.appendChild(div);

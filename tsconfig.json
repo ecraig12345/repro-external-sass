@@ -3,7 +3,7 @@
     "allowJs": true,
     "checkJs": false,
     "isolatedModules": true,
-    "verbatimModuleSyntax": false,
+    "verbatimModuleSyntax": true,
     "allowSyntheticDefaultImports": true,
     "target": "ESNext",
     "module": "ESNext",

@@ -1,10 +1,12 @@
 import { build } from 'oribuild';
 
+const divider = `\n=============================================\n`;
+
 export default async function bundle(additionalArgs = []) {
   const input = {
     absWorkingDir: process.cwd(),
     entryPoints: {
-      'index': 'src/index.ts'
+      'index': './src/index.ts'
     },
     // This should have worked, but possibly could be resolving relative to process.cwd()
     // absWorkingDir: 'C:\\git\\repro-external-sass',
@@ -20,17 +22,16 @@ export default async function bundle(additionalArgs = []) {
     write: true
   };
 
-  console.log(`Input:`, JSON.stringify(input, null, 2));
+  console.log(`Input:${divider}${JSON.stringify(input, null, 2)}\n`);
 
   const output = await build(input);
-  
-  output.errors.length && console.log(`Errors:\n`, output.errors.map(friendlyMessage).join('\n'), '');  
-  output.warnings.length && console.log(`Warnings:\n`, output.warnings.map(friendlyMessage).join('\n'), '');  
+  output.errors.length && console.log(`Errors:${divider}${output.errors.map(friendlyMessage).join('\n')}`);  
+  output.warnings.length && console.log(`Warningsn${divider}${output.warnings.map(friendlyMessage).join('\n')}`);  
   output.outputFilePaths.length
-    ? console.log(`Output files:`, JSON.stringify(output.outputFilePaths, null, 2), '')
+    ? console.log(`Output files:${divider}${JSON.stringify(output.outputFilePaths, null, 2)}\n`)
     : console.log('No output files');  
 }
 
-function friendlyMessage(message) {
-  return `Error: ${message.text}${message.location ? ` at ${message.location.file}:${message.location.line}:${message.location.column}` : ''}`;
+function friendlyMessage(message, index) {
+  return `Error ${index+1}: ${message.text}${message.location ? ` at ${message.location.file}:${message.location.line}:${message.location.column}` : ''}\n`;
 }
