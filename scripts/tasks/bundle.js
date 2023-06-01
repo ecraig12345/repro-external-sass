@@ -1,20 +1,26 @@
 // @ts-check
 import { build } from 'oribuild';
+import path from "node:path"
+import {fileURLToPath} from 'node:url'
 
 const divider = `\n=============================================\n`;
 
 export default async function bundle(additionalArgs = []) {
+  // calculate some common build-root
+  const buildRoot = path.join(fileURLToPath(import.meta.url), '..', '..', '..')
+  const relPath = path.relative(buildRoot , process.cwd())
   const input = /** @type {import('oribuild').BuildOptions} */ ({
-    absWorkingDir: process.cwd(),
+    absWorkingDir: buildRoot ,
     entryPoints: {
-      'index': './src/index.ts'
+      // make index relative to process.cwd
+      'index': path.join(process.cwd(), './src/index.ts')
     },
     // This should have worked, but possibly could be resolving relative to process.cwd()
     // absWorkingDir: 'C:\\git\\repro-external-sass',
     // entryPoints: {
     //   'packages/app/lib/index': '.\\packages\\app\\src\\index.ts'
     // },
-    outdir: './lib',
+    outdir: path.join(relPath, './lib'),
     external: [],
     minify: false,
     incremental: false,
