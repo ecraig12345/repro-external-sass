@@ -45,7 +45,6 @@ lib-amd
 lib-commonjs
 lib-es2015
 coverage
-dist
 screenshots
 stats
 *.tar.gz
