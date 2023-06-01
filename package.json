@@ -6,9 +6,8 @@
     "packages/*",
     "scripts"
   ],
-  
   "dependencies": {
-    "oribuild": "^0.0.0-pre-alpha.14",
+    "oribuild": "^0.0.0-pre-alpha.14-2023053110-8966cc7",
     "typescript": "^5.0.4",
     "fs-extra": "^11.1.1"
   }

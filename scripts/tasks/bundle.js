@@ -1,9 +1,10 @@
+// @ts-check
 import { build } from 'oribuild';
 
 const divider = `\n=============================================\n`;
 
 export default async function bundle(additionalArgs = []) {
-  const input = {
+  const input = /** @type {import('oribuild').BuildOptions} */ ({
     absWorkingDir: process.cwd(),
     entryPoints: {
       'index': './src/index.ts'
@@ -19,8 +20,9 @@ export default async function bundle(additionalArgs = []) {
     incremental: false,
     splitting: true,
     metafile: true,
-    write: true
-  };
+    write: true,
+    serviceOptions: {}
+  });
 
   console.log(`Input:${divider}${JSON.stringify(input, null, 2)}\n`);
 
