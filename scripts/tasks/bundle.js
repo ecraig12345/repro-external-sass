@@ -10,7 +10,7 @@ export default async function bundle(additionalArgs = []) {
   const buildRoot = path.join(fileURLToPath(import.meta.url), '..', '..', '..')
   const relPath = path.relative(buildRoot , process.cwd())
   const input = /** @type {import('oribuild').BuildOptions} */ ({
-    absWorkingDir: buildRoot ,
+    absWorkingDir: buildRoot,
     entryPoints: {
       // make index relative to process.cwd
       'index': path.join(process.cwd(), './src/index.ts')
@@ -41,5 +41,9 @@ export default async function bundle(additionalArgs = []) {
 }
 
 function friendlyMessage(message, index) {
-  return `Error ${index+1}: ${message.text}${message.location ? ` at ${message.location.file}:${message.location.line}:${message.location.column}` : ''}\n`;
+  let msg = `Error ${index+1}: ${message.text}${message.location ? ` at ${message.location.file}:${message.location.line}:${message.location.column}` : ''}\n`;
+  if (message.notes) {
+    msg = msg+ "\n  " + message.notes.map(note => note.text).join('\n  ')
+  }
+  return msg
 }
