@@ -6,7 +6,8 @@ To repro:
 
 ```
 yarn
-cd packages/apps
+echo $(cd packages/foo && yarn build)
+cd packages/app
 yarn bundle
 ```
 
