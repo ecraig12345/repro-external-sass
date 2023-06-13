@@ -7,16 +7,22 @@
     ".": "./lib/index.js"
   },
   "scripts": {
-    "build": "run-script build",
-    "bundle": "run-script bundle",
+    "build": "tsc",
+    "bundle-ori": "node ../../scripts/bundle-ori.js",
+    "bundle-cloudpack-ori": "node ../../scripts/bundle-cloudpack-ori.js",
+    "bundle-cloudpack-full": "cloudpack bundle; cat dist/browser-esm/ori-input.json",
+    "init-cloudpack": "cloudpack init",
     "serve": "serve ."
   },
   "dependencies": {
-    "@repro/common-sass": "*",
-    "@repro/foo": "*"
+    "@repro/common-sass": "*"
   },
   "devDependencies": {
-    "@repro/scripts": "*",
-    "serve": "^14.2.0"
+    "@repro/scripts": "*"
+  },
+  "ori": {
+    "entrypoints": {
+      "app": "./src/index.ts"
+    }
   }
 }

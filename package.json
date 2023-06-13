@@ -6,9 +6,24 @@
     "packages/*",
     "scripts"
   ],
-  "dependencies": {
+  "scripts": {
+    "bundle-ori": "yarn workspace @repro/app bundle-ori",
+    "bundle-cloudpack-ori": "yarn workspace @repro/app bundle-cloudpack-ori",
+    "bundle-cloudpack-full": "yarn workspace @repro/app bundle-cloudpack-full",
+    "init-cloudpack": "yarn workspace @repro/app init"
+  },
+  "devDependencies": {
+    "@ms-cloudpack/cli": "^0.39.2",
     "@types/node": "^16",
-    "oribuild": "^0.0.0-pre-alpha.14-2023053110-8966cc7",
-    "typescript": "^5.0.4"
+    "oribuild": "0.0.0-pre-alpha.14-2023060617-803c756",
+    "prettier": "^2.8.8",
+    "serve": "^14.2.0",
+    "typescript": "^5.0.4",
+    "workspace-tools": "^0.34.6"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true
   }
 }

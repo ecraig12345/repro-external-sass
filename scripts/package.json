@@ -2,11 +2,5 @@
   "name": "@repro/scripts",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "bin": {
-    "run-script": "./bin/run-script.js"
-  },
-  "scripts": {
-    "lint": "cloudpack-scripts lint"
-  }
+  "type": "module"
 }

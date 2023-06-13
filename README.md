@@ -1,32 +1,29 @@
 # repro-external-sass
 
-This repro demos some issues we hit with oribuild. Primarily, importing sass files across package boundaries.
+This repo demos an issue with importing sass files across package boundaries.
 
-To repro:
+## Working variants
+
+These variants of bundling `packages/app` succeed (note the input options logged):
+
+- `yarn bundle-ori`: using `oribuild`'s API
+- `yarn bundle-cloudpack-ori`: using `@ms-cloudpack/bundler-plugin-ori`'s API
+
+## Non-working variant
+
+`yarn bundle-cloudpack-full`: Calls `cloudpack bundle` and fails:
 
 ```
-yarn
-echo $(cd packages/foo && yarn build)
-cd packages/app
-yarn bundle
+• /Users/me/repro-external-sass/packages/app/packages/app/src/index.module.scss:0:0: Error > /Users/me/repro-external-sass/packages/app/src/index.module.scss:2
+File to import not found or unreadable: ~@repro/common-sass/dist/common.scss.
+• /Users/me/repro-external-sass/packages/app/packages/app/src/index.module.scss:0:0: failed getting relative path into virtual fs: Rel: can't make @repro/common-sass/dist/common.scss relative to /Users/me/repro-external-sass
+• /Users/me/repro-external-sass/packages/app/packages/app/src/index.ts:1:19: sass require /Users/me/repro-external-sass/packages/app/src/index.module.scss" -> "@repro/common-sass/dist/common.scss" resolved as an External import, but sass does not support @import at runtime
 ```
 
-### Resulted
+If you look at the input options logged in the console, this is the notable difference from the working variants, because Cloudpack is automatically marking all deps as external:
 
 ```
-Errors:
-=============================================
-Error 1: Error > D:/git/repro-external-sass/packages/app/src/index.module.scss:2
-File to import not found or unreadable: ~@repro/common-sass/dist/common.scss. at src/index.module.scss:0:0
-
-Error 2: failed reading file: stat ../common-sass/dist/common.scss: invalid argument at src/index.module.scss:0:0
+  "external": [
+    "@repro/common-sass"
+  ],
 ```
-
-### Expected
-
-1 output file, no errors
-
-### Notes
-
-The `scripts\tasks\bundle.js` file controls the oribuild bundling options. Notice the `absWorkingDir` is in the context of the app. However, the `@repro/foo` import resolves correctly even though it's outside this root dir. So, why does `@repro/foo` resolve, but not `@repro/common-sass`?
-

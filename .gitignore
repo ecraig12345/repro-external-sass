@@ -41,12 +41,8 @@ $RECYCLE.BIN/
 dist.stats.json
 temp
 dist
+dist-*
 lib
-lib-amd
-lib-commonjs
-lib-es2015
-coverage
-screenshots
 stats
 *.tar.gz
 

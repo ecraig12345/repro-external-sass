@@ -1,24 +1,6 @@
 {
+  "extends": "./scripts/tsconfig.base.json",
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": false,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
-    "declaration": true,
-    "declarationMap": true,
-    "lib": ["ES2020", "DOM"],
-    "sourceMap": true,
-    "inlineSources": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "jsx": "react",
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "types": ["node"]
+    "noEmit": true
   }
 }
