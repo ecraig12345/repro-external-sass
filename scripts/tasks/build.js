@@ -1,5 +1,5 @@
 import path from 'path';
-import fs from 'fs-extra';
+import fs from 'fs';
 import { runScript } from '../runScript.js';
 
 /** @type {import("../types.js").Task} */

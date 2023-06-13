@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@oribuild/tsserver-lean@0.0.0-pre-beta.25-2023053114-e608c2e":
-  version "0.0.0-pre-beta.25-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/@oribuild/tsserver-lean/-/tsserver-lean-0.0.0-pre-beta.25-2023053114-e608c2e.tgz#c7b060033c1b60869d026be9936fafb91dd3991c"
-  integrity sha512-GZqjRSt+h7ShyFO4Xu1HACng8eqAMkiLqdqoKDO1aDVXVr98HmqjXiZUMAUVRZXHT9sFWT3k2/3aX8HLDpAMXA==
+"@oribuild/tsserver-lean@0.0.0-pre-beta.25-2023061220-916eb9d":
+  version "0.0.0-pre-beta.25-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/@oribuild/tsserver-lean/-/tsserver-lean-0.0.0-pre-beta.25-2023061220-916eb9d.tgz#01a285be582b7341c647d9d4a41223e99343ca9f"
+  integrity sha512-EDZHMkCC+uvO53Thep0pqCxkcSkFFwalNjWwv8khPjjgY8OkYkiYpAq25zeVobaBy+zlZHJGAHnI/Qz8SqHEHw==
   dependencies:
     get-port "^6.1.2"
     resolve "^1.22.2"
@@ -13,6 +13,11 @@
     typescript "^5.0.4"
     uuid "^9.0.0"
     ws "^8.8.1"
+
+"@types/node@^16":
+  version "16.18.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.34.tgz#62d2099b30339dec4b1b04a14c96266459d7c8b2"
+  integrity sha512-VmVm7gXwhkUimRfBwVI1CHhwp86jDWR04B5FGebMMyxV90SlCmFujwUHrxTD4oO+SOYU86SoxvhgeRQJY7iXFg==
 
 "@zeit/schemas@2.29.0":
   version "2.29.0"
@@ -257,15 +262,6 @@ fast-url-parser@1.1.3:
   dependencies:
     punycode "^1.3.2"
 
-fs-extra@^11.1.1:
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.1.tgz#da69f7c39f3b002378b0954bb6ae7efdc0876e2d"
-  integrity sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -280,11 +276,6 @@ get-stream@^6.0.0:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
-
-graceful-fs@^4.1.6, graceful-fs@^4.2.0:
-  version "4.2.11"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
-  integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
 has-flag@^4.0.0:
   version "4.0.0"
@@ -351,15 +342,6 @@ json-schema-traverse@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
-
-jsonfile@^6.0.1:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
-  integrity sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==
-  dependencies:
-    universalify "^2.0.0"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -436,53 +418,53 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-oribuild-darwin-amd64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-darwin-amd64/-/oribuild-darwin-amd64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#772ebf6fc40525d631d2ad2aedb6a0614b1b28d2"
-  integrity sha512-HjhCkvFW4WmFGX64+eDWTNUpNngtSap+5A3mw3YnaE/mlntk5VlIvgbLMbHarqNuWMybCEhFjAfcsF2Ebx4dfA==
+oribuild-darwin-amd64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-darwin-amd64/-/oribuild-darwin-amd64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#ed6f8db2c74e138e3798e09d9529eefa9344b81b"
+  integrity sha512-GEz8XxY59s5BIXZcaGqTepNMspw+0gnbdn2jnxDf1LxMDJz0gUh9a/c32ih3Bd9Q0LjvxtM5x+Sk8WG4DK+HQg==
 
-oribuild-darwin-arm64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-darwin-arm64/-/oribuild-darwin-arm64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#021d9808574eaa4009e294afd4fda41d8c28ab25"
-  integrity sha512-ArPhBE45n75BYA2dxAkPfnVQ9jl1Z7aqbpP9rOzxF+dhGNBat/xRYCbv+cQjlgPOE0r7xu7QJpGe8TN3FMCLYA==
+oribuild-darwin-arm64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-darwin-arm64/-/oribuild-darwin-arm64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#adfdb4feefe8f48fbeb632c80dc4bd4ca12509b2"
+  integrity sha512-FR67zNRSBRlnYv/qf/+sfoCvTyI8p/dGOjhNVc5sMxwH4Wte2BXpb1b3gD1fLWozlXzeR7zhjBX9IOAugrWvRw==
 
-oribuild-linux-amd64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-linux-amd64/-/oribuild-linux-amd64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#3c4f64158758ae581ac93705d80a3cc62c2530b4"
-  integrity sha512-l1+1wG5l3SC/7TzkkYgx8ypcgCtWC5+TqgKT7nIpvvwPK3kfVa49aDJy//f6uwxbXuaBdwAn/e+bOahDgXjqLg==
+oribuild-linux-amd64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-linux-amd64/-/oribuild-linux-amd64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#a8491eb638efd109db3cf85e3175096af69e1fdd"
+  integrity sha512-of2404qDVUbbWfYHXD0Y6wPrvmimtV14FaAA2ag2c93h/LTia1dXhnj5rmryen5mKsiMl5ow3g57BdcoQuuLrg==
 
-oribuild-linux-arm64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-linux-arm64/-/oribuild-linux-arm64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#321970ecf64899fc48b09d38c940c8933345fba9"
-  integrity sha512-Lg8vdfYqfnIovf0MiO+drCcPvdDH+wclzEvU+46azRHTEO7ajie9+5N4Dr6pyRo4vUB1uotzpz741Q8vbRQnPw==
+oribuild-linux-arm64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-linux-arm64/-/oribuild-linux-arm64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#f034e6641205560f47c09a7c539809a35e324773"
+  integrity sha512-CrtjgjLTZp+97ZAFl/pdaerZyI2xcbO8XLbeUDXCi7mAfOk6XOLhsljqOIcvopw/uImmxtwrAXKKZwWSylnt/w==
 
-oribuild-windows-amd64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-windows-amd64/-/oribuild-windows-amd64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#d95f9a6055f21ab63652d33177ed78dd44b72a5c"
-  integrity sha512-M1xPDgLDnIPKCZWerU9fZ3tDtiCXgLFl6Pjx8hK7rc86HVgV8YoFDLCu+TxfPzsqKdNyNdeUTAPOMBwl77ak3A==
+oribuild-windows-amd64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-windows-amd64/-/oribuild-windows-amd64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#1018b600c792f6def7237db7a5aabad85345e714"
+  integrity sha512-NKXyqEtDjcu0BDXgBZwomKWsbZOz7jsky6f2YHqJCsl3UTSP6gL/dUNrEKvCgafnM1KqorNkDitODRKBV8tLhg==
 
-oribuild-windows-arm64@0.0.0-pre-alpha.14-2023053114-e608c2e:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild-windows-arm64/-/oribuild-windows-arm64-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#111a5194091fe1553f6b261981b82d5a6d76c394"
-  integrity sha512-NcoFi5qSfwfYH1XPx3g7T+S6u64dM7IOSG+0splLTcA030xxMZrzkHbmKV8+t25N9FLdPEnLJ46saCjI7onKsw==
+oribuild-windows-arm64@0.0.0-pre-alpha.14-2023061220-916eb9d:
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild-windows-arm64/-/oribuild-windows-arm64-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#e90bd28fc041e9bb96fa58b5d13d5037c32413ac"
+  integrity sha512-w0yNyWix/XcokknIXYY/gbq7oc+GSBNedoCgFaNfIODtJ8fA8uhr5rYeQ7ZoqAqiZZyDRtgC94AfZFU68HMnvg==
 
 oribuild@^0.0.0-pre-alpha.14-2023053110-8966cc7:
-  version "0.0.0-pre-alpha.14-2023053114-e608c2e"
-  resolved "https://registry.yarnpkg.com/oribuild/-/oribuild-0.0.0-pre-alpha.14-2023053114-e608c2e.tgz#a94367951d9834f53023fb81773d9611b7f3e024"
-  integrity sha512-wTdWSHAEgbxWWEbstcaN469nDhf09vJEe+aX6epa6jjWCoqhljFIDY0ZxKq+fIICylErD181rpUf45gNgef2ow==
+  version "0.0.0-pre-alpha.14-2023061220-916eb9d"
+  resolved "https://registry.yarnpkg.com/oribuild/-/oribuild-0.0.0-pre-alpha.14-2023061220-916eb9d.tgz#457ebcacf0b049ba11855a99aca111cf356fc077"
+  integrity sha512-FttORBOPRVG1p9JYDvWH+uO49g4FyXrOSFgP4hfbk6orjneqg2y392FFmknZxx/W0oWYT3Gc+omqD4lF1ibLqg==
   dependencies:
-    "@oribuild/tsserver-lean" "0.0.0-pre-beta.25-2023053114-e608c2e"
+    "@oribuild/tsserver-lean" "0.0.0-pre-beta.25-2023061220-916eb9d"
     get-port "^6.1.2"
     tree-kill "^1.2.2"
     uuid "^9.0.0"
     ws "^8.13.0"
   optionalDependencies:
-    oribuild-darwin-amd64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
-    oribuild-darwin-arm64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
-    oribuild-linux-amd64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
-    oribuild-linux-arm64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
-    oribuild-windows-amd64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
-    oribuild-windows-arm64 "0.0.0-pre-alpha.14-2023053114-e608c2e"
+    oribuild-darwin-amd64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
+    oribuild-darwin-arm64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
+    oribuild-linux-amd64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
+    oribuild-linux-arm64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
+    oribuild-windows-amd64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
+    oribuild-windows-arm64 "0.0.0-pre-alpha.14-2023061220-916eb9d"
 
 path-is-inside@1.0.2:
   version "1.0.2"
@@ -684,11 +666,6 @@ typescript@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
   integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
-
-universalify@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
-  integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
 update-check@1.5.4:
   version "1.5.4"

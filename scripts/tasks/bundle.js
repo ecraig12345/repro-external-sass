@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url'
 
 const divider = `\n=============================================\n`;
 
-export default async function bundle(additionalArgs = []) {
+export default async function bundle() {
   // calculate some common build-root
   const buildRoot = path.join(fileURLToPath(import.meta.url), '..', '..', '..')
   const relPath = path.relative(buildRoot , process.cwd())
@@ -20,7 +20,7 @@ export default async function bundle(additionalArgs = []) {
     // entryPoints: {
     //   'packages/app/lib/index': '.\\packages\\app\\src\\index.ts'
     // },
-    outdir: path.join(relPath, './lib'),
+    outdir: path.join(relPath, './dist'),
     external: [],
     minify: false,
     incremental: false,
@@ -33,11 +33,11 @@ export default async function bundle(additionalArgs = []) {
   console.log(`Input:${divider}${JSON.stringify(input, null, 2)}\n`);
 
   const output = await build(input);
-  output.errors.length && console.log(`Errors:${divider}${output.errors.map(friendlyMessage).join('\n')}`);  
-  output.warnings.length && console.log(`Warningsn${divider}${output.warnings.map(friendlyMessage).join('\n')}`);  
+  output.errors.length && console.log(`Errors:${divider}${output.errors.map(friendlyMessage).join('\n')}`);
+  output.warnings.length && console.log(`Warningsn${divider}${output.warnings.map(friendlyMessage).join('\n')}`);
   output.outputFilePaths.length
     ? console.log(`Output files:${divider}${JSON.stringify(output.outputFilePaths, null, 2)}\n`)
-    : console.log('No output files');  
+    : console.log('No output files');
 }
 
 function friendlyMessage(message, index) {
